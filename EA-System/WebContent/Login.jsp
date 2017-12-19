@@ -17,7 +17,7 @@ marquee{
 	font-size:30px
 }
 </style>
-</head>
+</head> 
 <body>
 	<div class="container">
 		<h1 align="center" style="color: dimgray">教务系统</h1>
