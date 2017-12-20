@@ -25,7 +25,7 @@ marquee{
 		<form class="form-group" action="LoginServlet" method="post" style="width: 30%; margin: auto;">
 			<div class="input-group">
 				<span class="input-group-addon">帐号</span>
-				<input type="text" class="form-control " name="uname">
+				<input type="text" class="form-control " name="uname" autofocus>
 			</div>
 			<div style="color: gray">学生请输入学号；教师请输入职工号</div>
 			<br />

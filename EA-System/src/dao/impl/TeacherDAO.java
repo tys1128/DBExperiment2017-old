@@ -1,6 +1,10 @@
+package dao.impl;
 
 import java.sql.*;
 import java.util.ArrayList;
+
+import dao.PersonDAO;
+import entity.Teacher;
 
 class Login_Property {
 	public String username;
@@ -86,8 +90,8 @@ public class TeacherDAO implements PersonDAO{
 	* 无参
 	* @return 所要查询的老师的信息
 	*/
-	public ArrayList<TeacherBean> getTeacherManagement_Privilege() {
-		ArrayList<TeacherBean> teachers = new ArrayList<TeacherBean>();
+	public ArrayList<Teacher> getTeacherManagement_Privilege() {
+		ArrayList<Teacher> teachers = new ArrayList<Teacher>();
 		try {
 
 			Connection conn_1 = DriverManager.getConnection("jdbc:oracle:thin:@47.94.200.154:1521:ORCL", "student",
@@ -96,7 +100,7 @@ public class TeacherDAO implements PersonDAO{
 			String sql = "select name,id,dept_name,salary from instructor ";
 			ResultSet result_1 = state_1.executeQuery(sql);
 			while (result_1.next()) {
-				TeacherBean teacher = new TeacherBean();
+				Teacher teacher = new Teacher();
 				teacher.setName(result_1.getString("name"));
 				teacher.setId(result_1.getString("id"));
 				teacher.setDepartment_Name(result_1.getString("dept_name"));

@@ -1,3 +1,4 @@
+package entity;
 
 /**
  * Title:Teacher-Data存储类<br>
@@ -6,13 +7,13 @@
  * @author a-member
  * @version 1.0
  */
-public class TeacherBean {
+public class Teacher {
 	private String name;
 	private String id;
 	private String department_Name;
 	private int salary;
 
-	public TeacherBean() {
+	public Teacher() {
 		
 	}
 
